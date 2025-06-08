@@ -1,4 +1,3 @@
-readme_health_ai = """
 # 🏥 Health.AI – Your Personalized Voice-Based Health Assistant
 
 **Health.AI** is an innovative health-tech platform that uses **voice, text, and prescription uploads** to provide instant and personalized **medical solutions** in both **modern allopathic (English)** and **traditional Ayurvedic** medicine styles.
