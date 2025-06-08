@@ -44,7 +44,7 @@ export const insertConsultationSchema = createInsertSchema(consultations).pick({
   prescriptionText: true,
   symptoms: true,
   voiceTranscript: true,
-});
+}).partial();
 
 export const insertPrescriptionImageSchema = createInsertSchema(prescriptionImages).pick({
   filename: true,

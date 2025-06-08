@@ -85,9 +85,12 @@ export class MemStorage implements IStorage {
   async createConsultation(consultation: InsertConsultation & { userId: number }): Promise<Consultation> {
     const id = this.currentConsultationId++;
     const newConsultation: Consultation = {
-      ...consultation,
       id,
+      userId: consultation.userId,
       prescriptionUrl: null,
+      prescriptionText: consultation.prescriptionText || null,
+      symptoms: consultation.symptoms || null,
+      voiceTranscript: consultation.voiceTranscript || null,
       allopathicPlan: null,
       ayurvedicPlan: null,
       status: "pending",

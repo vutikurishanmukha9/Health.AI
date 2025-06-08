@@ -1,5 +1,6 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
+import express from "express";
 import multer from "multer";
 import path from "path";
 import fs from "fs";
@@ -30,7 +31,7 @@ const upload = multer({
     if (file.mimetype.startsWith('image/')) {
       cb(null, true);
     } else {
-      cb(new Error('Only image files are allowed'), false);
+      cb(new Error('Only image files are allowed'));
     }
   }
 });
@@ -173,7 +174,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       fs.mkdirSync(uploadDir, { recursive: true });
     }
     next();
-  }, require('express').static(path.join(process.cwd(), 'uploads')));
+  }, express.static(path.join(process.cwd(), 'uploads')));
 
   const httpServer = createServer(app);
   return httpServer;
