@@ -1,5 +1,3 @@
-# Generate and save the correct README.md content for the Health AI platform
-
 readme_health_ai = """
 # 🏥 Health.AI – Your Personalized Voice-Based Health Assistant
 
